@@ -1,0 +1,37 @@
+footer {
+    display:block;
+    margin: 24px auto 14px auto;
+    max-width:100%;
+    text-align:center;
+    align-content:center;
+}
+
+.footer-tagline {
+    display:block;
+    font-size:1.09rem;
+    font-family:'nunito';
+    place-self:center;
+    align-items:center
+}
+
+
+.footer-contactinfo {
+    display:block;
+    font-size:1.09rem;
+    font-family:'nunito';
+    place-self:center;
+    align-items:center
+}
+
+.footer-socialmedia {
+    display:inline-flex;
+    font-size:1.09rem;
+    font-family:'nunito';
+    place-self:center;
+    place-items:center;
+    place-content:center;
+}
+
+.footer-copyright {
+    font-family:'nunito';
+}

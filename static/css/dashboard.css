@@ -1,0 +1,36 @@
+.dashboard{
+    display:grid;
+    position:fixed;
+    grid-template-columns:67px 1fr;
+    grid-template-rows:67px 1fr;
+    grid-template-areas:
+    "header header header"
+    "navigation display display";
+    height:fit-content;
+    max-height:629px;
+    min-width:404px;
+    width:97%;
+    max-width:794px;
+    gap:11px;
+    color:var(--primarytextcolor);
+    padding:11px;
+    /* background:lavenderblush; */
+    /* background:lavenderblush; */
+    background:#f1ecee67;
+    -webkit-backdrop-filter:blur(29px) saturate(.94) brightness(92%);
+    backdrop-filter:blur(29px) saturate(.94) brightness(92%);
+    border: 2px solid rgba(255, 255, 255, 0.17);
+    border-radius:11px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    scrollbar-width: none;
+    scrollbar-color:var(--primarytextcolor) black;
+    overflow: hidden;
+    opacity:1;
+    z-index:9999;
+    transform:translate(-24px);
+    transition: all .4s ease-in-out;
+}
+
+.dashboard.expand{
+    display:grid;
+}
