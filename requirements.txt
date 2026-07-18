@@ -1,0 +1,18 @@
+Flask
+Flask-Session
+Flask_Login
+Flask_Cors
+Python_Dotenv
+flask_socketio
+sqlite3
+sqlitedict
+# eventlet
+gevent
+gunicorn
+stripe
+# gem install stripe
+
+
+# pip install --upgrade pip
+# pip install -r requirements.txt
+# pip install sqlitedict
