@@ -1,0 +1,287 @@
+<!doctype html>
+
+
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+        <!-- Tells iOS the webpage can run in full-screen standalone web app mode -->
+        <meta name="mobile-web-app-capable" content="yes">
+
+        <!-- Makes the status bar background completely transparent and overlays it onto the page -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+        <!-- <meta name="theme-color" content="transparent"> -->
+        <title>Premium Beauty Services and Treatments at Faithfully Lashed Studio</title>
+        <meta name="description" content="Explore our beauty services including lash extensions and exclusive VIP memberships for all your beauty treatments needs."/>
+        <link rel="icon" href="static/images/fl-logo-nobg.png" type="image/png">
+
+        <link rel="stylesheet" href="static/css/index.css">
+        <link rel="stylesheet" href="static/css/footer.css">
+        <link rel="stylesheet" href="static/css/account.css">
+        <!-- <link rel="stylesheet" href="static/css/dashboard.css"> -->
+        <!-- <link rel="stylesheet" href="messenger.css"> -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+        <script src="static/js/transitionscript.js" defer></script>
+        <script src="static/js/searchscript.js" defer></script>
+        <script src="static/js/registrationscript.js" defer></script>
+        <script src="static/js/loginscript.js" defer></script>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+    </head>
+
+<div style="position:fixed; top:0px; background:transparent; backdrop-filter: blur(42px); -webkit-backdrop-filter: blur(42px); z-index:11;"></div>
+    <body style="position:relative;">
+        <img class="bannerimage" src="/static/images/fl-banner-cropped3.jpeg" width="104%" height="100%" style="border:2px none red; margin-left:-2%; margin-top:-9px">
+
+
+        <!-- <img class="titleimage banner" src="{{ url_for('static', filename='images/fl-banner-cropped3.jpeg') }}" width="104%" height="100%" style="border:2px none red; margin-left:-2%; margin-top:-9px"> -->
+            <div id="headerpadding" class="header-padding header-padding-fade"></div>
+            <header id="header" class="reveal" data-direction="top">
+
+                <div class="header-navigation">
+
+                    <div class="header-buttonhover"><a class="navigation-item navigation-homebtn header-buttonhover underline-animation" href="{{ url_for('index') }}">
+                            <svg fill="#eda8c4" height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 337.588 337.588" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="XMLID_10_"> <path id="XMLID_11_" d="M275.448,142.723c-17.413,0-33.63,7.095-45.355,19.658c-11.725-12.563-27.942-19.658-45.355-19.658 c-34.264,0-62.14,27.876-62.14,62.141c0,62.447,75.357,112.811,98.454,126.758c2.739,1.654,5.876,2.529,9.074,2.529c0,0,0,0,0,0 c3.171,0,6.287-0.861,9.01-2.491c23.096-13.819,98.453-63.804,98.453-126.796C337.588,170.599,309.712,142.723,275.448,142.723z"></path> <path id="XMLID_12_" d="M77.635,111.319c-7.479,0-14.498,2.759-19.954,7.72c-5.456-4.96-12.474-7.72-19.954-7.72 c-16.619,0-30.139,13.845-30.139,30.863c0,29.659,34.148,53.181,44.613,59.683c1.655,1.028,3.554,1.572,5.494,1.572 c1.924,0,3.811-0.535,5.456-1.548c10.468-6.444,44.623-29.793,44.623-59.707C107.773,125.165,94.253,111.319,77.635,111.319z"></path> <path id="XMLID_13_" d="M171.625,109.265c1.833,1.107,3.933,1.692,6.073,1.692c0,0,0,0,0.001,0c2.122,0,4.208-0.577,6.029-1.667 c12.679-7.585,54.045-35.062,54.045-70.139c0-19.693-16.021-35.714-35.714-35.714c-9.197,0-17.813,3.444-24.379,9.605 c-6.565-6.161-15.182-9.605-24.379-9.605c-19.693,0-35.714,16.021-35.714,35.714C117.588,73.928,158.949,101.609,171.625,109.265z"></path> <path id="XMLID_14_" d="M34.08,71.939c1.426,0.861,3.06,1.316,4.725,1.317c0,0,0,0,0,0c1.651,0,3.273-0.449,4.691-1.297 c10.25-6.133,34.092-22.766,34.092-44.683c0-13.146-10.694-23.84-23.84-23.84c-5.541,0-10.766,1.873-14.954,5.261 C34.606,5.31,29.381,3.437,23.84,3.437C10.694,3.437,0,14.131,0,27.277C0,49.012,23.833,65.751,34.08,71.939z"></path> </g> </g></svg>
+                            HOME
+                    </a></div>
+
+                    <div class="header-buttonhover"><a class="navigation-item navigation-servicesbtn header-buttonhover underline-animation" href="{{ url_for('services') }}">SERVICES</a></div>
+
+                    <div class="header-buttonhover"><a class="navigation-item navigation-membershipsbtn header-buttonhover underline-animation" href="memberships.html">MEMBERSHIPS</a></div>
+
+                    <div class="header-buttonhover"><a class="navigation-item navigation-faqsbtn header-buttonhover underline-animation" href="faqs.html">FAQs</a></div>
+
+                    <button class="navigation-item navigation-morebtn"><div class="header-buttonhover">MORE&nbsp;<svg class="arrow" style="vertical-align:-14%;" width="1.2rem" height="1.2rem" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z" fill="currentColor"/></svg></div></button>
+                    <div class="navigation-morebtn-menu">
+                        <a class="header-buttonhover" href="contact.html">CONTACT US</a>
+                        <a class="header-buttonhover" href="memberships.html">MEMBERSHIPS</a>
+                        <a class="header-buttonhover" href="reviews.html">TESTIMONIALS</a>
+                        <a class="header-buttonhover" href="gallery.html">GALLERY</a>
+                        <a class="header-buttonhover" href="services(finalized).html">SHOP</a>
+                    </div>
+
+                </div>
+
+
+                <div class="header-tools">
+
+                    <button popovertarget="dashboardwindow" id="header-dashboardswitch" class="toolsitem tools-dashboardbtn header-dashboardbtn-hover dashboardswitch profile-picture-wrapper2" style="display:none;">
+                        <img src="static/images/defaultprofilepicture.png" height="100%" width="100%" class="profilepicture">
+                    </button>
+
+                    <button popovertarget="accountwindow" id="header-accountbtn" class="tools-item tools-accountbtn header-buttonhover accountswitch"><svg viewBox="0 0 24 24" fill="currentColor" width="2rem" height="2rem" data-ux="UtilitiesMenuIcon" data-typography="NavAlpha" class="x-el x-el-svg c2-1b c2-1c c2-4d c2-y c2-7w c2-7x c2-1g c2-10 c2-11 c2-12 c2-13 c2-1d c2-1h c2-m c2-1e c2-4 c2-1f c2-14 c2-15 c2-w c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M5.643 19.241a.782.782 0 0 1-.634-.889c.317-2.142 1.62-4.188 3.525-5.244l.459-.254-.39-.352a4.89 4.89 0 0 1-.797-6.327 4.747 4.747 0 0 1 2.752-2.003 4.894 4.894 0 0 1 6.092 5.72c-.211 1.042-.802 1.97-1.59 2.683l-.308.28.459.253c1.876 1.04 3.185 3.131 3.53 5.26a.765.765 0 0 1-.742.883c-.367.005-.697-.25-.753-.613-.52-3.384-4.067-6.087-7.702-4.324-1.628.79-2.714 2.511-3.014 4.313a.76.76 0 0 1-.887.614zm2.873-10.36a3.36 3.36 0 0 0 3.356 3.355A3.36 3.36 0 0 0 15.23 8.88a3.361 3.361 0 0 0-3.358-3.357A3.36 3.36 0 0 0 8.516 8.88z"></path></svg></button>
+
+                    <a class="tools-item tools-cartbtn header-buttonhover" href="{{ url_for('cart') }}"><svg viewBox="115.712 115.712 297.6 299.6" xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" stroke-width=".7rem"><title>Shopping_Cart</title><g data-name="Shopping Cart" id="Shopping_Cart"><g data-name="Shopping Cart" id="Shopping_Cart-2"><path d="M351.9,329.5063H206.81l-3.0723-12.56H368.1614l26.63-116.019L177.5618,174.8861l-9.9526-58.0885h-50.4v21.945h31.8934l35.2332,191.2465a32.927,32.927,0,1,0,36.3628,21.4622H320.9431A32.8248,32.8248,0,1,0,351.9,329.5063ZM181.4272,197.4486l186.5106,22.3589-17.2592,75.194H198.9174Z"/></g></g></svg></a>
+                    <div id="tools-cart-display" class="tools-cart-display">Your cart is empty.</div>
+
+                    <button popovertarget="searchwindow" class="tools-item tools-searchbtn header-buttonhover searchswitch"><svg viewBox="0 0 24 24" fill="currentColor" width="2rem" height="2rem" data-ux="UtilitiesMenuIcon" data-aid="SEARCH_ICON_RENDERED" data-typography="NavAlpha" class="x-el x-el-svg c2-1b c2-1c c2-t c2-y c2-3l c2-1g c2-10 c2-11 c2-12 c2-13 c2-1d c2-m c2-1q c2-3m c2-3n c2-3o c2-1e c2-4 c2-1f c2-14 c2-15 c2-w c2-5 c2-3p c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.504 18.461a.76.76 0 0 1 0 1.038.652.652 0 0 1-.956 0L15.2 15.993a6.142 6.142 0 0 1-3.83 1.353C7.858 17.346 5 14.353 5 10.673 5 6.994 7.858 4 11.371 4c3.513 0 6.371 2.994 6.371 6.673a6.82 6.82 0 0 1-1.536 4.333l3.298 3.455zM6.377 10.673c0 2.884 2.24 5.231 4.994 5.231 2.754 0 4.994-2.347 4.994-5.231s-2.24-5.23-4.994-5.23c-2.754 0-4.994 2.346-4.994 5.23z"></path></svg></button>
+
+                </div>
+
+
+                <div class="header-dropdown">
+                    <!-- <div popovertarget="dashboardwindow" id="header-accountbtn2" class="tools-item header-buttonhover dashboardswitch profile-picture-wrapper2" style="display:none;grid-area:subgridb-item-1;width:fit-content; margin:0px; padding:0px; justify-self:center; justify-items:center; justify-content:center; text-align:center; background:transparent; border:2px none red; box-shadow: none;">
+                        <img id="profileimage" class="profileimage" data-databasekey="profileimage" src="static/images/defaultprofilepicture.png" height="100%" width="100%">
+                    </div> -->
+
+                    <button id="header-dropdownbtn" class="tools-item tools-dropdownbtn"><div class="svgrotate"><svg class="header-buttonhover" viewBox="0 0 1024.00 1024.00" height="1.19rem" width="1.19rem" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width="65.536"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="currentColor" d="M160 448a32 32 0 0 1-32-32V160.064a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32V416a32 32 0 0 1-32 32H160zm448 0a32 32 0 0 1-32-32V160.064a32 32 0 0 1 32-32h255.936a32 32 0 0 1 32 32V416a32 32 0 0 1-32 32H608zM160 896a32 32 0 0 1-32-32V608a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32v256a32 32 0 0 1-32 32H160zm448 0a32 32 0 0 1-32-32V608a32 32 0 0 1 32-32h255.936a32 32 0 0 1 32 32v256a32 32 0 0 1-32 32H608z"></path></g></svg></div></button>
+                    <div class="tools-dropdownbtn-menu">
+                        <button popovertarget="accountwindow" class="tools-dropdownbtn-menu-btn header-buttonhover accountswitch">ACCOUNT</button>
+                        <a class="tools-dropdownbtn-menu-btn header-buttonhover" href="reviews.html">SHOP</a>
+                        <button popovertarget="searchwindow" class="tools-dropdownbtn-menu-btn header-buttonhover searchswitch">SEARCH</button>
+                    </div>
+                </div>
+
+            </header>
+
+
+        <br><br><br>
+
+        <main>
+            <section id="section1" class="homepage-primarygrid reveal">
+
+                <div class="homepage-primarygrid-intro reveal boxshadow">
+                    <img class="homepage-primarygrid-intro-portrait" src="/static/images/headshot-transparent.png" alt="headshot" style="width:100%;height:100%;object-fit:cover;background:transparent;">
+                    <div class="homepage-primarygrid-intro-introduction reveal" data-direction="bottom">
+                        <div class="glasscard-primary reveal" style="min-width:100%;width:100%; max-width:100%;" data-direction="left">
+                            <br>
+                            <div style="font-family: 'Fjalla One'; font-size: clamp(8px, 3.94cqw, 29px); text-align:center; white-space:nowrap;"><strong>Your Private Lash Escape in Nashville 🤍</strong></div>
+
+                            <br>
+
+                            <div style="font-size: clamp(16px, 3.24cqw, 17px);">
+                                <p style="text-align:justify left">Hey, babe! I'm, the owner of Faithfully Lashed, your cozy home-based lash studio in Nashville, TN.</p>
+                                <p style="text-align:justify left">I specialize in Classic, Hybrid, and Volume Lash Extensions designed to enhance your natural beauty and lifestyle.
+                                    Each set is fully customized with intention, whether you love a clean, natural look or full, fluffy glam.</p>
+                                <p style="text-align:justify left">I also offer Lash Lifts, Brow Laminations, and Brow Tinting for clients who prefer low-maintenance beauty with soft, luxury results.
+                                My goal is to give you more than just great lashes; I want every appointment to feel peaceful, personal, and confidence-boosting from start to finish.</p>
+                                <p style="text-align:justify left">At Faithfully Lashed Studio, your first visit isn’t just an appointment — it’s an introduction to what luxury lash care actually feels like.</p>
+                                <br>
+                                <p style="text-align:justify left">Every new client receives:</p>
+
+                                <p>→ A complimentary style consultation</p>
+                                <p>→ A complimentary lash bath with your service</p>
+                                <p>→ A lash look customized specifically for your eye shape and lifestyle</p>
+                            </div>
+
+                            <br>
+
+                            <div class="homepage-primarygrid-intro-buttons">
+                                <a href="services(finalized).html"><button class="homepage-primarygrid-intro-btn buttonhover" onclick="document.getElementById('quickBook').click()">Book Your First Set</button></a>
+                                <a href="services(finalized).html"><button class="homepage-primarygrid-intro-btn buttonhover" onclick="document.getElementById('services').click()">Contact Us</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="homepage-primarygrid-info reveal boxshadow" data-direction="bottom">
+                    <div class="glasscard-primary reveal" data-direction="right" style="height:fit-content; width:100%; max-width:524px; justify-self:center; font-weight:900;">
+                        <!-- style="font-family: 'Fjalla One'; darkgrey" -->
+                        <h2 style="font-family: 'Fjalla One'; font-size: clamp(8px, 4cqw, 29px); text-align:center; white-space:nowrap;">Hours & Contact</h2>
+                        <br>
+                        <div>Mon–Fri | 8:00am - 7:00pm</div>
+                        <div>Saturday | 9:00am - 5:00pm</div>
+                        <div>Sunday | Closed</div>
+                        <div>Major Holidays | Closed</div>
+                        <br>
+                        <hr style="border:none;height:1px;background:var(--primaryplaceholdercolor);margin:11px 0;border-radius:6px">
+                        <br>
+                        <div style="font-weight:700">Faithfully Lashed</div>
+                        <div style="margin-top:6px;">Nashville, TN<br>(We Come To You!)<br><br>Email: info@faithfullylashedstudio.com<br>Phone: +1 (629) 400-8232</div>
+                        <div style="margin-top:50px;font-size:13px;">We're closed on major holidays. If your date falls on a major holiday the system will not allow booking and will prompt alternate dates.</div>
+                    </div>
+                </div>
+
+
+                <div class="homepage-primarygrid-mailinglist reveal boxshadow" data-direction="left">
+
+                    <div class="mailinglist-form-container" style="display:grid; justify-self:center;">
+
+                        <div class="mailinglist-form-container-card reveal" data-direction="bottom">
+                            <div class="mailinglist-description">
+                                <div style="font-family: 'Fjalla One'; font-size: clamp(8px, 6.08cqw, 29px); text-align:center; white-space:nowrap;"><strong>BECOME A FAITHFULLY LASHED INSIDER &nbsp;<svg fill="#eda8c4" height="1.2rem" width="1.2rem" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 337.588 337.588" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="XMLID_10_"> <path id="XMLID_11_" d="M275.448,142.723c-17.413,0-33.63,7.095-45.355,19.658c-11.725-12.563-27.942-19.658-45.355-19.658 c-34.264,0-62.14,27.876-62.14,62.141c0,62.447,75.357,112.811,98.454,126.758c2.739,1.654,5.876,2.529,9.074,2.529c0,0,0,0,0,0 c3.171,0,6.287-0.861,9.01-2.491c23.096-13.819,98.453-63.804,98.453-126.796C337.588,170.599,309.712,142.723,275.448,142.723z"></path> <path id="XMLID_12_" d="M77.635,111.319c-7.479,0-14.498,2.759-19.954,7.72c-5.456-4.96-12.474-7.72-19.954-7.72 c-16.619,0-30.139,13.845-30.139,30.863c0,29.659,34.148,53.181,44.613,59.683c1.655,1.028,3.554,1.572,5.494,1.572 c1.924,0,3.811-0.535,5.456-1.548c10.468-6.444,44.623-29.793,44.623-59.707C107.773,125.165,94.253,111.319,77.635,111.319z"></path> <path id="XMLID_13_" d="M171.625,109.265c1.833,1.107,3.933,1.692,6.073,1.692c0,0,0,0,0.001,0c2.122,0,4.208-0.577,6.029-1.667 c12.679-7.585,54.045-35.062,54.045-70.139c0-19.693-16.021-35.714-35.714-35.714c-9.197,0-17.813,3.444-24.379,9.605 c-6.565-6.161-15.182-9.605-24.379-9.605c-19.693,0-35.714,16.021-35.714,35.714C117.588,73.928,158.949,101.609,171.625,109.265z"></path> <path id="XMLID_14_" d="M34.08,71.939c1.426,0.861,3.06,1.316,4.725,1.317c0,0,0,0,0,0c1.651,0,3.273-0.449,4.691-1.297 c10.25-6.133,34.092-22.766,34.092-44.683c0-13.146-10.694-23.84-23.84-23.84c-5.541,0-10.766,1.873-14.954,5.261 C34.606,5.31,29.381,3.437,23.84,3.437C10.694,3.437,0,14.131,0,27.277C0,49.012,23.833,65.751,34.08,71.939z"></path> </g> </g></svg></strong></div>
+                                <br>
+                                <div style="color:black;"><strong>Get exclusive offers, booking updates, and lash care tips straight to your inbox. Stay in the loop with all things lashes, beauty, and self-care.</strong></div>
+                                <br>
+                                <div style="color:black;"><strong>Sign up to receive 10% off your first service ♡</strong></div>
+                                <br>
+                            </div>
+
+                            <form id="mlform" class="mailinglist-forminput-grid" action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="a07cbfdb-3324-4558-80f2-e67349af9fc8">
+                                <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                                <input type="checkbox" name="botcheck" id="" style="display: none;">
+                                    <div class="mailinglist-fullname-phonenumber mailinglist-forminput-item">
+                                        <div style="width:100%;"><label>Full Name</label><br><input autocomplete="on" id="mlfullname" name="mlname" placeholder="your name" type="text" required></div>
+                                        <div style="width:100%;"><label>Phone Number</label><br><input autocomplete="on" id="mlphone" name="mlphone" placeholder="your phone number" type="text" required></div>
+                                    </div>
+                                    <!-- <div class="mailinglist-phonenumber mailinglist-forminput-item"><label>Phone Number</label><input autocomplete="on" id="mlphone" name="mlphone" placeholder="your phone number" type="text" required></div> -->
+                                    <div class="mailinglist-email mailinglist-forminput-item"><div style="width:100%;"><label>Email</label><br><input autocomplete="on" id="mlemail" name="mlemail" placeholder="your email" type="email" required></div></div>
+                                <input type="hidden" name="redirect" value="none">
+                                <button popovertarget="mailinglist-confirmation-window" id="mlbtn" class="mailinglist-submitbtn buttonhover" type="submit">SIGN ME UP!</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section id="section1">
+
+
+            <br><br>
+
+
+            <section id="section2" class="homepage-secondarygrid reveal" data-direction="top">
+
+                    <div class="homepage-secondarygrid-services-label"><h2>LASHES, BROWS, OR FACIALS?</h2></div>
+                    <div class="homepage-secondarygrid-services reveal" data-direction="right">
+                        <div class="homepage-secondarygrid-services-lashes homepage-secondarygrid-item boxshadow hover serviceclick1">LASHES</div>
+                        <div class="homepage-secondarygrid-services-brows homepage-secondarygrid-item boxshadow hover serviceclick2">BROWS</div>
+                        <div class="homepage-secondarygrid-services-facials homepage-secondarygrid-item boxshadow hover serviceclick3">FACIALS</div>
+                    </div>
+
+
+                    <div class="homepage-secondarygrid-highlights-label"><h2>CHECK OUT WHAT'S POPULAR!</h2></div>
+                    <div class="homepage-secondarygrid-highlights reveal" data-direction="bottom">
+                        <div class="homepage-secondarygrid-highlights-hightlight1 homepage-secondarygrid-item-b boxshadow hover highlight1">LASH LIFT & TINT</div>
+                        <div class="homepage-secondarygrid-highlights-hightlight2 homepage-secondarygrid-item-b boxshadow hover highlight2">CLASSIC</div>
+                        <div class="homepage-secondarygrid-highlights-hightlight3 homepage-secondarygrid-item-b boxshadow hover highlight3">HYBRID</div>
+                    </div>
+
+
+
+            </section id="section2">
+
+
+            <br><br>
+
+
+            <section id="section4">
+
+                <div style="display:block; place-self:center; place-items:center; place-content:center; min-width:97%; max-width:97%;">
+                    <div class="igcard reveal" data-direction="top" style="display:block; border:none; border-radius:14px;padding:0px;height:fit-content; width:fit-content; place-self:center; place-items:center; place-content:center; min-width:100%; box-shadow:0 7px 9px rgba(2,6,23,0.4); overflow:hidden;">
+                        <!-- <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/faithfullylashedstudio/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="margin-bottom:0px !important; background:#FFF; inset:none !important; border:0; border-radius:14px !important; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0px !important; padding:0px !important; max-width:540px; min-width:326px; padding:0 !important; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:0px;"> <a href="https://www.instagram.com/faithfullylashedstudio/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0 !important; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 0px !important; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 0% 0;"></div> <div style="display:block; height:50px; margin:0 auto 0px !important; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this profile on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 0px !important; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 0px; !important"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 0px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0 !important; margin-top:0px; overflow:hidden; padding:0px 0 0px !important; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/faithfullylashedstudio/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">Faithfully Lashed Studio🤍 ™️</a> (@<a href="https://www.instagram.com/faithfullylashedstudio/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">faithfullylashedstudio</a>) • Instagram photos and videos</p></div></blockquote> -->
+                        <!-- <script async src="//www.instagram.com/embed.js"></script> -->
+
+
+                        <!-- height="581" -->
+                        <!-- min-width: 326px; -->
+                        <iframe class="instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/faithfullylashedstudio/embed/?cr=1&amp;v=14&amp;wp=1620&amp;rd=http%3A%2F%2Flocalhost%3A5001&amp;rp=%2F#%7B%22ci%22%3A0%2C%22os%22%3A316.0999999642372%2C%22ls%22%3A114.59999996423721%2C%22le%22%3A277.19999998807907%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" min-height="fit-content !important" height="411vh !important" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background: black !important; max-width: 540px; width: 100%; border: 0px none rgb(219, 219, 219); box-shadow: none; display: block; min-width: 100%; border-radius: 14px !important; margin: 0px 0px 0px; padding: 0px !important;"></iframe>
+
+                    </div>
+                </div>
+
+            </section id="section4">
+
+
+            <br><br>
+
+
+            <section id="section5" style="margin-bottom:24px;">
+
+                <div class="boxshadow reveal" data-direction="left bottom" style="background-color:lavenderblush;border-radius: 11px;text-align:left; margin:0 auto;padding:24px;padding-right:42px;max-width:97%;list-style-position:inside;box-shadow:0 7px 9px rgba(2,6,23,0.4);">
+                    <h2>Cancellation Policy❗</h2>
+                    <div style="font-family: 'Nunito'">
+                        <p style="margin:0">At <strong>Faithfully Lashed</strong>, I value both your time and mine. As a solo artist, every appointment is specially reserved just for you. To ensure fairness and respect for all clients, the following cancellation policy is in place:</p>
+                        <br>
+                        <p style="margin:0"><span><strong>📅 Cancellation Notice</strong></span></p><p style="margin:0"><ul>
+                        <span><li>I kindly ask for <strong>at least 24 hours notice</strong> to cancel or reschedule your appointment.</li></span>
+                        <li>Cancellations made with less than 24 hours notice will result in <strong>loss of your $25 deposit</strong>.</li>
+                        <li>Same-day cancellations or no-shows may be charged up to <strong>50% of the full service price</strong>.</li>
+                        </ul></p><p style="margin:0"><span><strong>💬 How to Cancel</strong></span></p><p style="margin:0"><ul>
+                        <li>Cancellations must be made via text or through the booking system.</li>
+                        <li>If you’re feeling sick or experiencing an emergency, please communicate with me as soon as possible. I understand life happens, but communication is key.</li>
+                        </ul></p><p style="margin:0"><span><strong>🚫 No-Show Policy</strong></span></p><p style="margin:0"><ul>
+                        <li>No-call/no-shows will result in <strong>forfeiture of your deposit</strong> and may require full prepayment for future bookings or result in being declined future services.</li>
+                        </ul></p><p style="margin:0"><span><em>*No guests or extra company during service</em><br>
+                        </span></p><p style="margin:0"><span>By booking your appointment, you agree to this cancellation policy. Thank you for respecting my time and supporting my small business 💕</span>
+                    </div>
+                    <br>
+                </div>
+
+            </section id="section5">
+
+
+
+            <section id="hiddensection" style="display:flex;">
+                {% include 'hidden.html' %}
+
+            </section id="hiddensection">
+
+
+        </main>
+
+        {% include 'footer.html' %}
+    </body>
+    {% include 'dashboard.html' %}
+</div>
+</html>

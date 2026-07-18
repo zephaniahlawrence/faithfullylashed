@@ -1,0 +1,71 @@
+<div id="profile" class="profile" style="width:100%; overflow:none; border:2px none red; padding:0px;">
+    <div id="personalinfo" class="personalinfo" style="grid-area:personalinfo; width:100%; padding:11px; overflow:none; border:2px none #B76E79; box-shadow: 10px 10px 5px transparent;">
+        <!-- Edit Profile -->
+        <!-- <br> -->
+        <!-- <br> -->
+        <div id="processcode" name="processcode" class="processcode" style="text-align:center;border:2px none red;"></div>
+
+        <form id="updateprofileform" action="/updateprofile" name="updateprofileform" method="post" enctype="multipart/form-data" class="updateprofileform2" style="width:100%; color:var(--primarytextcolor); border:2px none red; overflow:scroll; justify-content:left; justify-items:left; padding-bottom:8px; padding-inline:8px;">
+            <!-- Action attribute specifies where to send the form data, method specifies the HTTP method (POST is recommended for sensitive data) -->
+
+            <!-- <div style="width:100%; display:flex;"> -->
+                <label for="fullnameupdate">Full Name</label><br>
+                <input id="fullnameupdate" name="fullnameupdate" class="fullnameupdate profiletextinput" data-databasekey="fullname" style="width:100%;" type="text"><br><br>
+
+                <label for="phonenumberupdate">Phone Number</label><br>
+                <input id="phonenumberupdate" name="phonenumberupdate" type="phone" class="phonenumberupdate profiletextinput" data-databasekey="phonenumber" style="width:100%;"><br><br>
+
+            <!-- </div> -->
+            <!-- <div> -->
+                <label for="emailupdate">Email</label><br>
+                <input id="emailupdate" name="emailupdate" type="email" class="emailupdate profiletextinput" data-databasekey="email" style="width:100%;"><br><br>
+
+                <label for="addressupdate">Home Address</label><br>
+                <input id="addressupdate" name="addressupdate" type="text" class="addressupdate profiletextinput" data-databasekey="address" style="width:100%;"><br><br>
+
+            <!-- </div> -->
+            <!-- <label for="bio">Biography (optional):</label><br> -->
+            <!-- <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br> -->
+
+            <label for="file">Profile Picture</label>
+            <!-- <br style="display: block; content: ''; margin-top: 1px;height: 0px; background:red; color: red; border:2px solid red;">
+            <br style="display: block; content: ''; margin-top: 1px;height: 0px; background:red; color: red; border:2px solid red;"> -->
+            <!-- <input id="profilepictureplaceholder" style="display: grid; width:169px; background:transparent; color:pink; border:2px none #B76E79; justify-self:left; justify-items:left; text-align:left; border:2px solid none;" type="file" id="profile_picture" name="profile_picture" enctype="multipart/form-data"><br> -->
+            <!-- <form id="profileimageform" action="/upload" method="post" enctype="multipart/form-data" style="width:100%;"> -->
+            <input id="file" name="file" class="profileimageupdate customfilebtn" data-databasekey="profileimage" type="file" method="post" enctype="multipart/form-data" style="margin-top:11px;">
+                    <!-- <input class="buttonhover" type="submit" value="Upload" style="background:transparent; color:pink; border:2px solid #B76E79;"> -->
+            <!-- </form> -->
+            <!-- border: 1px solid rgba(255, 255, 255, .08); box-shadow: 0 0 8px rgba(0, 0, 0, 0.24); -->
+
+            <button id="changepasswordbtn" class="buttonhover" style="margin-top:9px; justify-self:center; width:100%;color:var(--primarytextcolor); border: 1px solid rgba(255, 255, 255, .08); box-shadow: 0 0 8px rgba(0, 0, 0, 0.24); box-shadow: 0 0 8px rgba(0, 0, 0, 0.24); border-radius:9px; padding:9px; justify-self:center; justify-items:center; justify-content:center; text-align:center; white-space:nowrap; cursor:pointer;" type="button">
+                Change Password
+            </button>
+            <br>
+
+
+            <div id="changepasswordsection" class="changepasswordsection" style="width:100%;">
+                <div id="errorcode" name="errorcode" class="errorcode" style="text-align:center;"></div><br>
+                <label for="oldpassword">Old Password</label>
+                <input id="oldpassword" name="oldpassword" type="password" placeholder="Old password" class="profiletextinput" style="width:100%;"><br><br>
+                <!-- <i class='bx bxs-key'></i> -->
+
+                <label for="newpassword">New Password</label>
+                <input id="newpassword" name="newpassword" type="password" placeholder="New password" class="profiletextinput" style="width:100%;"><br><br>
+
+                <label for="newpasswordconfirmation">Confirm New Password</label>
+                <input id="newpasswordconfirmation" name="newpasswordconfirmation" type="password" placeholder="Confirm new password"class="profiletextinput" style="width:100%;">
+                <!-- <br> -->
+            </div>
+
+            <!-- <input style="width:100%; color:pink; background:transparent; border:2px solid #B76E79;" type="submit" value="Save Profile"> -->
+            <!-- <div id="changepasswordbtn" class="buttonhover" style="grid-area:savebutton; justify-self:center; width:100%; border:2px solid #B76E79; border-radius:9px; padding:9px; justify-self:center; justify-items:center; justify-content:center; text-align:center; white-space:nowrap; cursor:pointer;" type="button">
+                Save Profile
+            </div> -->
+        </form>
+    </div>
+    <button id="submitprofileupdate" name="submitprofileupdate" type="submit" class="buttonhover" form="updateprofileform" style="grid-area:savebutton; justify-self:center; width:100%; color:var(--primarytextcolor); border: 1px solid rgba(255, 255, 255, .08); box-shadow: 0 0 8px rgba(0, 0, 0, 0.24); border-radius:9px; padding:9px; margin-bottom:7px; justify-self:center; justify-items:center; justify-content:center; text-align:center; white-space:nowrap; cursor:pointer;">
+                Save Profile
+    </button>
+    <!-- <div style="grid-area:membershipinfo">jodijc</div> -->
+    <!-- <div style="grid-area:paymentinfo">joidc</div> -->
+</div>

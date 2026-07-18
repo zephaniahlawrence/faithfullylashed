@@ -1,0 +1,50 @@
+<div id="adminpanel" name="adminpanel" class="adminpanel">
+    <div id="adminuserdisplay" name="adminuserdisplay" class="adminuserdisplay">
+        <select id="userselector" name="userselector" style="display:grid; font-family: 'Fjalla One'; width:100%; background:transparent; border: 1px solid rgba(255, 255, 255, .08); box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.24); color:var(--primarytextcolor); border-radius: 9px; padding:8px; font-size:14px;">
+            <!-- border:1px solid #B76E79; -->
+            <!-- #B76E7999 -->
+            <!-- rgba(255, 255, 255, .08) -->
+            <option value="Select User" style="text-align:left" selected>Select User</option>
+        </select>
+        <div id="displayuser" name="displayuser" class="displayuser" style="display:grid;border:2px none red;"></div>
+        <br>
+        <div style="display:flex; margin-bottom:0px;">
+            <button class="buttonhover" style="width:100%; background:transparent; color:var(--primarytextcolor); border: 1px solid rgba(255, 255, 255, .08); box-shadow: 0 0 8px rgba(0, 0, 0, 0.24); border-radius:4px; padding:4px;">New User</button> &nbsp;
+            <button class="buttonhover" style="width:100%; background:transparent; color:var(--primarytextcolor); border: 1px solid rgba(255, 255, 255, .08); box-shadow: 0 0 8px rgba(0, 0, 0, 0.24); border-radius:4px; padding:4px;">Save User</button> &nbsp;
+            <button class="buttonhover" style="width:100%; background:transparent; color:var(--primarytextcolor); border: 1px solid rgba(255, 255, 255, .08); box-shadow: 0 0 8px rgba(0, 0, 0, 0.24); border-radius:4px; padding:4px;">Delete User</button> &nbsp;
+        </div>
+    </div>
+
+
+    <div id="adminmessagingdisplay" class="adminmessagingdisplay">
+        <form id="adminexistingchatform" name="adminexistingchatform" class="adminexistingchatform">
+            <!-- <button id="adminexistingchat" class="adminmessagewindowitem hover3" value="FL1Q0001" type="submit">FL1Q0001</button> -->
+
+        </form>
+
+        <form id="adminnewchatform" name="adminnewchatform" class="adminnewchatform" method="post">
+            <input id="adminnewchatsubject" name="adminnewchatsubject" class="adminnewchatsubject" type="text" placeholder="provide a chat subject">
+            <button id="adminstartnewchat" name="adminstartnewchat" class="adminstartnewchat hover4" type="submit">
+                    <svg fill="var(--primarytextcolor)" stroke="var(--primarytextcolor)" color="var(--primarytextcolor)" trace="var(--primarytextcolor)" width="24px" height="24px" viewBox="0 0 24.00 21.00" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.696"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="var(--primarytextcolor)" stroke-width="1.152"><path d="M20 2H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h3v3.767L13.277 18H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14h-7.277L9 18.233V16H4V4h16v12z"></path><path d="M11 14h2v-3h3V9h-3V6h-2v3H8v2h3z"></path></g><g id="SVGRepo_iconCarrier"><path d="M20 2H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h3v3.767L13.277 18H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14h-7.277L9 18.233V16H4V4h16v12z"></path><path d="M11 14h2v-3h3V9h-3V6h-2v3H8v2h3z"></path></g></svg>
+            </button>
+        </form>
+
+        <div id="adminchatdisplay" name="adminchatdisplay" class="adminchatdisplay">
+            {% include 'adminroom.html' %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+                                <!-- <button id="existingchat" class="messagewindowitem hover3 existingchat" value="${chatroom}" type="button" style="color:pink; stroke:pink; fill: pink;">
+                                    <div style="grid-area:messageitem-1; align-self:center; padding-left:4px;margin-right: 11px">
+                                        <svg viewBox="0 0 24 24" id="Layer_1" height="42px" width="42px" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.cls-1{fill:none;stroke:#020202;stroke-miterlimit:10;stroke-width:1.91px;}</style></defs><path class="cls-1" d="M18.68,8.16V15.8a2.86,2.86,0,0,1-2.86,2.86H13.91v2.86L8.18,18.66H4.36A2.86,2.86,0,0,1,1.5,15.8V8.16A2.86,2.86,0,0,1,4.36,5.3H15.82A2.86,2.86,0,0,1,18.68,8.16Z"></path><path class="cls-1" d="M18.68,14.84h1A2.86,2.86,0,0,0,22.5,12V4.34a2.86,2.86,0,0,0-2.86-2.86H8.18A2.86,2.86,0,0,0,5.32,4.34v1"></path><line class="cls-1" x1="5.32" y1="11.98" x2="7.23" y2="11.98"></line><line class="cls-1" x1="9.14" y1="11.98" x2="11.05" y2="11.98"></line><line class="cls-1" x1="12.95" y1="11.98" x2="14.86" y2="11.98"></line></g></svg>
+                                    </div>
+                                    <div style="grid-area:messageitem-2;">
+                                        <p style="justify-self:left; font-size:.94rem; margin-bottom:-9px;"><b>Chat ID: ${chatroom}</b></p>
+                                        <p style="font-size:.69rem;padding-right:9px;font-family: 'Nunito'">Need help booking or choosing a set?</p>
+                                    </div>
+                                </button> -->

@@ -1,0 +1,16 @@
+        <h1>Services</h1>
+        <form id="serviceform" name="serviceform" action="/updatecart" method="post"></form>
+
+        <br><br>
+
+        <h1>Your Cart</h1>
+
+        <div id="cartdisplay" name="cartdisplay"></div>
+        <div id="total" name="total"></div>
+        <div id="cartmessage" name="cartmessage"></div>
+        <br>
+
+
+
+        <a href="{{ url_for('index') }}">Continue Shopping</a><br>
+        <a id="clearcart" name="clearcart" href="{{ url_for('clear_cart') }}">Empty Cart</a>
